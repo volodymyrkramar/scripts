@@ -8,11 +8,9 @@ sudo update-alternatives --install "/usr/bin/jar" "jar" $jdk8"/bin/jar" 2
 
 sudo update-alternatives --set "java" $jdk8"/bin/java"
 sudo update-alternatives --set "javac" $jdk8"/bin/javac"
-sudo update-alternatives --set "jar" $jdk8"/bin/jar" 
+sudo update-alternatives --set "jar" $jdk8"/bin/jar"
 
 sed -i '/export JAVA_HOME/c\export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' /home/vkramar/.bashrc
 
 echo "switched to java 8"
 exec bash -i
-
- 
